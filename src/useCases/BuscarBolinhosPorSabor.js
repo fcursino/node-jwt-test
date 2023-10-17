@@ -10,7 +10,7 @@ class BuscarBolinhosPorSabor {
                 `select * from estoque where sabor = ?`,
                 [sabor]
             )
-            
+
             return resultado;
         }catch(error) {
             return new AppError(error.message, 500)

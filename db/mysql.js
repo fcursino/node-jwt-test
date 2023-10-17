@@ -9,6 +9,7 @@ var pool = mysql.createPool({
 });
 
 exports.execute = (query, params=[]) => {
+    console.log(pool)
     return new Promise((resolve, reject) => {
         pool.query(query, params, (error, result, fields) => {
             if (error) {
